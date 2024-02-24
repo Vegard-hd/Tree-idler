@@ -2,7 +2,6 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>A tree idle game!</title>
 		<link rel="stylesheet" href="styling.css" />
@@ -11,21 +10,22 @@
 		<header>
 			<h1>A tree idle game</h1>
 		</header>
-		<script src="../sweetalert2@11.js"></script>
-
-		<script src="../jquery-3.6.0.js"></script>
-		<script src="app.js"></script>
 		<div class="mainGrid">
 			<main>
-				<img class="treepic" src="../assets/tree-two.svg" alt="A tree" />
+				<b id="moneyDisplay"></b>
+				<div id="pic1">
+					<img class="treepic" src="../assets/tree-two.svg" alt="A tree" />
+				</div>
 				<img class="treepic" src="../assets/tree-three.svg" alt="A tree" />
 			</main>
-
 			<aside>
-				<button type="button">Click me button 1</button>
+				<button class="btn1" type="button">Click me button 1</button>
 				<button type="button">Click me button 2</button>
 				<button type="button">Click me button 3</button>
 			</aside>
 		</div>
+		<script src="../sweetalert2@11.js"></script>
+		<script src="../jquery-3.6.0.js"></script>
+		<script src="app.js"></script>
 	</body>
 </html>
