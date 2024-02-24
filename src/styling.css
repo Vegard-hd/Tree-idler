@@ -16,4 +16,18 @@ header {
 .mainGrid img {
 	max-height: 100%;
 	width: 30vh;
+	transition: width 800ms, height 800ms;
+	transition-delay: 300ms;
+	transition-timing-function: ease-in-out;
+}
+
+.mainGrid img:hover {
+	width: 31vh;
+}
+.mainGrid img:active {
+	border: 1px solid green;
+	width: 36vh;
+}
+img {
+	border: 1px solid red;
 }

@@ -1,2 +1,8 @@
-//toDo make jquery animato svg files on hover + css highlight
-//toDo animate svg files to shake 2-3 times left/right 1200ms? on click
+
+
+//grow trees to generate money $
+
+//Spend money to upgrade and grow more trees to make more $
+
+
+
