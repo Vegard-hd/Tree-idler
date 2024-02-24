@@ -1,0 +1,19 @@
+header {
+	margin-left: 50vh;
+	margin-right: 50vh;
+	text-align: center;
+}
+
+.mainGrid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+	justify-content: space-around;
+	align-content: stretch;
+	align-items: center;
+}
+
+.mainGrid img {
+	max-height: 100%;
+	width: 30vh;
+}

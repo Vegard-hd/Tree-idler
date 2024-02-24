@@ -1,4 +1,3 @@
 # Tree-idler
 
-
-//todo get started with 3 different trees that are clickable 
+# "Added three svg pictures of trees with 3 buttons that are alle inside flexbox"
