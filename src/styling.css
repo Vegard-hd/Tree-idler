@@ -5,29 +5,37 @@ header {
 }
 
 .mainGrid {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap-reverse;
-	justify-content: space-around;
-	align-content: stretch;
-	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	padding-bottom: 1.5rem;
+	grid-auto-flow: dense;
 }
 
 .mainGrid img {
+	display: block;
+	border: 0.5rem solid greenyellow;
+	justify-content: center;
+	align-items: center;
 	max-height: 100%;
 	width: 30vh;
-	transition: width 800ms, height 800ms;
-	transition-delay: 300ms;
-	transition-timing-function: ease-in-out;
+	position: relative;
 }
 
 .mainGrid img:hover {
-	width: 31vh;
+	/* width: 31vh; */
+	border: 0.5rem solid rgb(5, 64, 239);
 }
 .mainGrid img:active {
-	border: 1px solid green;
 	width: 36vh;
 }
-img {
-	border: 1px solid red;
+
+.secondaryGrid {
+	background-color: aquamarine;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+	align-items: center;
 }
