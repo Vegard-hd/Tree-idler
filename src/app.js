@@ -4,14 +4,32 @@
 
 // Tree takes time to grow?
 
-let currency = 0;
-$(document).ready(function () {
-	$("#pic1").click(function () {
-		currency += 1;
-		$("#moneyDisplay").text(currency);
-		console.log(currency);
+
+//Global variables
+var money = 0;
+var multiplier = 1;
+
+//onclick function calls
+$(function () {
+	$("#tree1").click(function () {
+		gainMoney(multiplier);
+	});
+	$("#tree2").click(function () {
+		gainMoney(multiplier);
+	});
+	$("#tree3").click(function () {
+		gainMoney(multiplier);
+	});
+	$("#tree4").click(function () {
+		gainMoney(multiplier);
 	});
 });
+
+function gainMoney(multiplier) {
+	console.log("clicked");
+	money += 1 * multiplier;
+	$("#moneyDisplay").text(money);
+}
 
 function spendMoney(currency) {
 	//spends currency to add some sort of multiplier
