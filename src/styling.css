@@ -1,71 +1,9 @@
-.background {
-	position: absolute;
-	width: 100%;
-
-	z-index: 1;
-}
-main {
-	z-index: 99;
-}
-
-header {
-	margin-left: 50vh;
-	margin-right: 50vh;
-	text-align: center;
-	z-index: 99;
-}
-
-.mainGrid {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 1rem;
-	padding-bottom: 1.5rem;
-	grid-auto-flow: dense;
-	z-index: 99;
-}
-.gridContent {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding-bottom: 5rem;
-	z-index: 99;
-}
-.mainGrid img {
-	display: block;
+img {
+	background-color: aqua;
 	border: 0.5rem solid greenyellow;
 	margin: 1rem;
 	max-height: 100%;
-	width: 30vh;
-	position: relative;
+	max-width: 25rem;
+	width: 85%;
 	z-index: 99;
-}
-
-.mainGrid img:hover {
-	/* width: 31vh; */
-	border: 0.5rem solid rgb(5, 64, 239);
-	z-index: 99;
-}
-.mainGrid img:active {
-	background-color: green;
-	z-index: 99;
-}
-
-.secondaryGrid {
-	z-index: 99;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 1rem;
-	justify-content: center;
-	align-items: center;
-	align-items: center;
-}
-
-button {
-	z-index: 99;
-	box-shadow: 1px 3px 0px black;
-	height: 3rem;
-}
-button:hover {
-	z-index: 99;
-	box-shadow: 0px 5px 3px black;
 }
