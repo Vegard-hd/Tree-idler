@@ -9,6 +9,6 @@ Tree-idler is a simple idle game where you can grow trees to generate money. As 
 
 ## TODO:
 
-Create a function that has a meny where one can choose between 4 different type of Trees to grow.
+Create a function with a menu where one can choose between 4 different types of Trees to grow.
 
 ## Made by https://github.com/Vegard-hd
