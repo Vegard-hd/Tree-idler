@@ -1,9 +1,10 @@
 img {
 	background-color: aqua;
-	border: 0.5rem solid greenyellow;
+	border: 0.5rem solid green;
 	margin: 1rem;
 	max-height: 100%;
 	max-width: 25rem;
-	width: 85%;
+	width: 80%;
+	min-width: 8rem;
 	z-index: 99;
 }
