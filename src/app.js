@@ -16,15 +16,19 @@ function mpToPercent(multiplier) {
 $(function () {
 	$("#tree1").click(function () {
 		gainMoney(multiplier);
+		disableElement("#tree1");
 	});
 	$("#tree2").click(function () {
 		gainMoney(multiplier);
+		disableElement("#tree2");
 	});
 	$("#tree3").click(function () {
 		gainMoney(multiplier);
+		disableElement("#tree3");
 	});
 	$("#tree4").click(function () {
 		gainMoney(multiplier);
+		disableElement("#tree4");
 	});
 	//////////////////////
 
@@ -60,4 +64,16 @@ function spendMoney() {
 	if (money < 50) {
 		$("#btn1").addClass("disabled");
 	}
+}
+
+function disableElement(target, duration = 10) {
+	let jqueryTarg = `${target}`;
+	console.log(jqueryTarg);
+
+	$(jqueryTarg).toggleClass(".disabled");
+
+	// create a timeline
+	let tl = gsap.timeline();
+	tl.to(jqueryTarg, { opacity: 0, duration: 1.5 });
+	tl.to(jqueryTarg, { opacity: 1, duration: 1.5 });
 }
