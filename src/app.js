@@ -40,11 +40,13 @@ $(function () {
 });
 
 function gainMoney(multiplier) {
-	console.log("clicked");
-	money += 1 * multiplier;
-	$("#moneyDisplay").text(money);
-	if (money >= 50) {
-		$("#btn1").removeClass("disabled");
+	console.log($(this));
+	if (!$("img").hasClass("treepic disabled")) {
+		money += 1 * multiplier;
+		$("#moneyDisplay").text(money);
+		if (money >= 50) {
+			$("#btn1").removeClass("disabled");
+		}
 	}
 }
 
@@ -66,14 +68,35 @@ function spendMoney() {
 	}
 }
 
-function disableElement(target, duration = 10) {
-	let jqueryTarg = `${target}`;
-	console.log(jqueryTarg);
+let onOff = true;
+function disableElement(target, duration = 1.5) {
+	if (onOff === false) {
+		console.log("if");
+	} else {
+		let jqueryTarg = `${target}`;
+		$(jqueryTarg).toggleClass("disabled");
+		onOff = false;
 
-	$(jqueryTarg).toggleClass(".disabled");
-
-	// create a timeline
-	let tl = gsap.timeline();
-	tl.to(jqueryTarg, { opacity: 0, duration: 1.5 });
-	tl.to(jqueryTarg, { opacity: 1, duration: 1.5 });
+		// create a timeline
+		let tl = gsap.timeline();
+		gsap.to("#progress1", {
+			width: "100%",
+			duration: 2,
+			ease: "power1.out",
+			onComplete: onComplete,
+		});
+		tl.to(jqueryTarg, { opacity: 0, duration: `${duration / 2}` });
+		tl.to(jqueryTarg, { opacity: 1, duration: `${duration / 2}` });
+		function onComplete() {
+			console.log("callback");
+			$(jqueryTarg).toggleClass("disabled");
+			gsap.to("#progress1", {
+				width: "0%",
+				duration: 0.2,
+				ease: "power1.out",
+			});
+			onOff = true;
+			console.log(onOff);
+		}
+	}
 }
