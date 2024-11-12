@@ -1,15 +1,22 @@
 {
   "name": "tree-idler",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tree-idler is a simple idle game where you can grow trees to generate money. As your funds increase, invest in upgrading and growing more trees to multiply your earnings!",
   "main": "jquery-3.6.0.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gsap": "^3.12.5"
+    "cookie-parser": "^1.4.7",
+    "debug": "^4.3.7",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "gsap": "^3.12.5",
+    "morgan": "^1.10.0"
   }
 }
