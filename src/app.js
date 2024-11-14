@@ -14,19 +14,19 @@ function mpToPercent(multiplier) {
 }
 //onclick function calls
 $(function () {
-  $("#tree1").click(function () {
+  $("#tree1").on("click", function (e) {
     gainMoney(multiplier);
     disableElement("#tree1");
   });
-  $("#tree2").click(function () {
+  $("#tree2").on("click", function (e) {
     gainMoney(multiplier);
     disableElement("#tree2");
   });
-  $("#tree3").click(function () {
+  $("#tree3").on("click", function (e) {
     gainMoney(multiplier);
     disableElement("#tree3");
   });
-  $("#tree4").click(function () {
+  $("#tree4").on("click", function (e) {
     gainMoney(multiplier);
     disableElement("#tree4");
   });
@@ -34,7 +34,7 @@ $(function () {
 
   /////////////
   //Button 1 spendmoney onclick bind
-  $("#btn1").click(function () {
+  $("#tree1").on("click", function (e) {
     spendMoney();
   });
 });
