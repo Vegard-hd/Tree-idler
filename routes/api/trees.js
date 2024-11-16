@@ -14,4 +14,13 @@ router.get("/", async function (req, res, next) {
   }
 });
 
+router.get("/all", async function (req, res, next) {
+  try {
+    const tree = await treeService.getAll();
+    res.status(200).send(tree).end();
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;
