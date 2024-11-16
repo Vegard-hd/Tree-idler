@@ -10,6 +10,18 @@ class TreeService {
     `);
     return userTrees;
   }
+  async subscribe(cb) {
+    // Subscribe to real-time changes in the userTrees table
+    supabase
+      .from("userTrees")
+      // @ts-ignore
+      .on("UPDATE", (payload) => {
+        console.log("Change received!", payload);
+        // Update the client-side state with the new tree health
+        cb(payload.new);
+      })
+      .subscribe();
+  }
 }
 
 module.exports = TreeService;
