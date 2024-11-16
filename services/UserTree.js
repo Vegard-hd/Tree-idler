@@ -1,15 +1,46 @@
 const supabase = require("../supabase");
 
 class TreeService {
-  async getOne(id) {
-    let { data: userTrees, error } = await supabase.from("userTrees").select(`
-      some_column,
-      other_table (
-        foreign_key
-      )
-    `);
-    return userTrees;
+  async getOne(userId, treeId) {
+    let { data: userTree, error } = await supabase
+      .from("userTrees")
+      .select("health, price")
+      .eq("user_id", userId)
+      .eq("tree_id", treeId)
+      .single();
+
+    if (error) {
+      throw error;
+    }
+
+    return userTree;
   }
+  async createTree() {
+    const { data, error } = await supabase
+      .from("userTrees")
+      .insert([{ some_column: "someValue", other_column: "otherValue" }])
+      .select();
+    if (error) {
+      throw error;
+    }
+
+    return data;
+  }
+
+  async updateHealth(userId, treeId, newHealth) {
+    let { data, error } = await supabase
+      .from("userTrees")
+      .update({ health: newHealth })
+      .eq("user_id", userId)
+      .eq("tree_id", treeId);
+
+    if (error) {
+      throw error;
+    }
+
+    return data;
+  }
+
   async subscribe(cb) {
     // Subscribe to real-time changes in the userTrees table
     supabase
