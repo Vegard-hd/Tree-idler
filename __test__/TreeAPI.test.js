@@ -15,3 +15,9 @@ describe("GET /trees/:id", () => {
     expect(response.body).toEqual({ id: "1", name: "Oak", age: 100 });
   });
 });
+
+it("Get details of userTrees", async () => {
+  const response = await request(app).get("/usertrees");
+  expect(response.statusCode).toBe(200);
+  expect(response.body).toHaveProperty("treeId");
+});

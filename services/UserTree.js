@@ -15,6 +15,9 @@ class TreeService {
 
     return userTree;
   }
+
+  //todo: create userTree with tree and user_id reference
+
   async createTree() {
     const { data, error } = await supabase
       .from("userTrees")
